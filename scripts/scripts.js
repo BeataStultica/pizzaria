@@ -1,7 +1,7 @@
 'use strict'
 
 function  cicle(){
-      if (window.location.hash.split('#').length == 0){
+      if (window.location.hash.split('#')[0].length == 0){
             let marg = Number(document.getElementsByClassName("slides")[0].style.marginLeft.slice(0,4))
             if (isNaN(marg)){
               marg = 0
