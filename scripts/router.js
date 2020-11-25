@@ -31,6 +31,7 @@ class Router {
                 timer = setInterval(cicle,8000)
                 viewName = 'mainPage';
                 endpointName = 'main';
+                window.location.hash = '';
                 break;
             }
         }
@@ -57,6 +58,7 @@ class Router {
                 timer = setInterval(cicle,8000)
                 viewName = 'mainPage';
                 endpointName = 'main';
+                window.location.hash = '';
                 break;
             }
 
@@ -65,6 +67,7 @@ class Router {
                 timer = setInterval(cicle,8000)
                 viewName = 'mainPage';
                 endpointName = 'main';
+                window.location.hash = '';
 
         }
 
