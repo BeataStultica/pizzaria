@@ -28,7 +28,8 @@ render();
 
 window.onhashchange = () => {
     let checker = window.location.hash.split('/')
-    if (checker.length==2 && checker[0]=="#order"  &&checker[1]=='1'){
+    if (flag){
+        flag = false
     }
     else{
         render()
