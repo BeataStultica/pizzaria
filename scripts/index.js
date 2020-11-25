@@ -17,14 +17,18 @@ function render(){
                 return client.getData(endpointName);
             })
             .then((data) => {
-                templateProcessor.render(view(data));
+                let view_page = view(data);
+                if (view_page){
+                templateProcessor.render(view(data))}
+                else{
+                    window.location.hash = '';
             }).then(()=>{spiner.close_spiner()});
 }
 render();
 
 window.onhashchange = () => {
     let checker = window.location.hash.split('/')
-    if (checker.length==2 && checker[0]=="#order"){
+    if (checker.length==2 && checker[0]=="#order"  &&checker[1]=='1'){
     }
     else{
         render()
