@@ -25,7 +25,9 @@ function categorySort(product){
 function view(product){
     let content = categorySort(product)
     let html_body = '<div class = "container-fluid">'
-    
+    if (content[0]==undefined){
+        return false
+    }
     html_body += `<h3 class="text-center">${content[0]}</h3>`
     html_body += `<div class =  "row" id="recom">
     ${content[1].map((item) =>`
