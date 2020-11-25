@@ -87,7 +87,7 @@ async function sendPOST(){
     alert("Ваша корзина пуста!")
   }
   else{
-    data = {
+    let data = {
       "name":form.name.value,
       "lastname": form.lastName.value,
       "email": form.email.value,
@@ -97,7 +97,7 @@ async function sendPOST(){
       "orders": JSON.parse(localStorage.getItem('cart')),
       "cost": document.getElementById("total").textContent
     }
-    const response = await fetch('http://my-json-server.typicode.com/BeataStultica/pizza/orders', {
+    try{const response = await fetch('http://my-json-server.typicode.com/BeataStultica/pizza/orders', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -126,8 +126,12 @@ async function sendPOST(){
         </div>
       </div>
       <a class="btn btn-danger btn-lg" id = "href_but" href = "#" role = "button">На головну сторінку</a>
-    </div>`
-        ;
+    </div>`;
+    }catch(error){
+          document.getElementById("main").innerHTML='<h2>Помилка доступу до сервера 404, спробуйте пізніше</h2>'
+          document.getElementById("spiner-box").style.width= '90vw'
+          document.getElementById("spiner-box").style.height= '90vh'
+    }
   }
 
 
