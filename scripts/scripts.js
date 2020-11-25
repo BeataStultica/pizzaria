@@ -1,13 +1,15 @@
 'use strict'
 
 function  cicle(){
-      let marg = Number(document.getElementsByClassName("slides")[0].style.marginLeft.slice(0,4))
-      if (isNaN(marg)){
-        marg = 0
-      }
-      document.getElementsByClassName("slides")[0].style.marginLeft = String(marg -100)+'%';
-      if (document.getElementsByClassName("slides")[0].style.marginLeft == "-500%"){
-        document.getElementsByClassName("slides")[0].style.marginLeft = "0%"
+      if (window.location.hash.split('#').length == 0){
+            let marg = Number(document.getElementsByClassName("slides")[0].style.marginLeft.slice(0,4))
+            if (isNaN(marg)){
+              marg = 0
+            }
+            document.getElementsByClassName("slides")[0].style.marginLeft = String(marg -100)+'%';
+            if (document.getElementsByClassName("slides")[0].style.marginLeft == "-500%"){
+              document.getElementsByClassName("slides")[0].style.marginLeft = "0%"
+            }
       }
   }
 let timer
@@ -77,7 +79,7 @@ function removeLocalStorage(id){
   localStorage.setItem("cart", JSON.stringify(temp))
   count_of_piza()
 }
-
+let flag = false
 async function sendPOST(){
   let form = document.getElementById('order')
   if (form.checkValidity() === false){
@@ -105,7 +107,7 @@ async function sendPOST(){
       body: JSON.stringify(data),
   });
     const json = await response.json();
-    
+    flag = true
     window.location.hash = 'order/'+json.id;
     localStorage.clear();
     document.getElementById("ItemNumb").textContent='0';
