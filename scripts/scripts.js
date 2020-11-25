@@ -97,7 +97,7 @@ async function sendPOST(){
       "orders": JSON.parse(localStorage.getItem('cart')),
       "cost": document.getElementById("total").textContent
     }
-    try{const response = await fetch('http://my-json-server.typicode.com/BeataStultica/pizza/orders', {
+    try{const response = await fetch('https://my-json-server.typicode.com/BeataStultica/pizza/orders', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
