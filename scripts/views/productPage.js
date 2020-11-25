@@ -9,7 +9,9 @@ function product_url(products){
 
 function view(products){
     let product = product_url(products)
-
+    if (product == undefined){
+        return false
+    }
     let body =  `
     <div class = "container-fluid">
         <div class = "row">
