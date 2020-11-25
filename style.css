@@ -1,0 +1,293 @@
+body{
+    background-color: rgb(202, 201, 201);
+    height: 100%;
+}
+#recom{
+    margin-top: 1vh;
+}
+
+.card{
+    margin-bottom: 10px;
+    border-radius: 10%;
+    transition: 0.5s;
+}
+.card button{
+    width: 90%;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card:hover{
+    box-shadow: 0 0 8px gray;
+}
+.card img{
+    border-radius: 10%;
+    width: 95%;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-img-top{
+    width: 100%;
+    height:100%;
+
+}
+
+.card-a{
+    margin-left: 5%;
+}
+
+
+
+#detal_pizza{
+    border-radius: 10%;
+    width: 95%;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#related_pizza{
+    width: 95%;
+    height: 80%;
+}
+#action_detal{
+    border-radius: 5%;
+    width: 95%;
+    margin-top: 5px;
+}
+h3{
+    margin-top: 3vw;
+    font-size: 4vw;
+}
+h4{ 
+    margin-top: 3vw;
+    font-size: 15vw;
+}
+
+#naw_button{
+    color: white;
+}
+
+p{
+    margin-left: auto;
+    margin-right: auto;
+
+}
+h4{
+    margin-left: 5%;
+    margin-top: 10px;
+    font-size: large;
+}
+#cart{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+}
+
+#pay{
+    margin-left: 3px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+}
+#zamov{
+    margin-top: 8%;
+}
+
+#ItemNumb{
+    font-size: smaller;
+}
+
+.form-inline{
+    background-color: azure; padding: 5px;
+    border-radius: 20px;
+}
+
+h2{
+    position: absolute;;
+    top: 8vw;
+    left: 10vw;
+}
+.slider{
+    position: relative;
+    width: 85vw;
+    height: 40vw;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+    overflow: hidden;
+}
+    
+.slides{
+    width: 500%;
+    height: 40vw;
+    display: flex;
+    transition: 3s;
+    margin-left: 0%;
+    }
+      
+      
+.slide{
+    position: relative;
+    width: 20%;
+    transition: 2s;
+    }
+      
+.slide img{
+    width: 85vw;
+    height: 40vw;
+}
+      
+.text-center{
+    margin-top: 1vh;
+}
+
+footer{
+    background-color: black;
+    color: white;
+}
+
+a,p{
+    color:gray;
+}
+
+.footer-copyright{
+    color:gray;
+}
+
+@media(min-width:768px){
+#footer-first{
+    margin-left: 6vw;
+}
+}
+
+.container-fluid{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+
+#first_but{
+    opacity: 0.5;
+    position: absolute;
+    left:5px;
+    top:48%;
+    z-index: 11;
+}
+
+#next_but{
+    opacity: 0.5;
+    position: absolute;
+    right:5px;
+    top:48%;
+    z-index: 11;
+}
+
+#href_but{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+}
+
+.orders{
+    margin-left: 45%;
+    margin-bottom: 5vh;
+}
+
+.category{
+    text-align: center;
+    border:1px;
+    margin-left: 15%;
+    color: white;
+    text-decoration: none;
+    font-size: 2vw;
+    background-color: rgb(85, 82, 82);
+
+}
+
+#cat{
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+
+.sectionName{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color:white;
+    font-size: 3em;
+    background-color: rgb(85, 82, 82);
+
+}
+
+#cat_box{
+    background-color: rgb(85, 82, 82);
+}
+
+#order_pizza{
+    border: 4px black;
+}
+
+.count{
+    margin-top: auto;
+    margin-left: 5%;
+    margin-bottom: auto;
+    background-color: gray;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    color: honeydew;
+    border-radius: 10em;
+
+}
+#tovar{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.end{
+    margin-bottom: 3vh;
+}
+
+#spin{
+    position: fixed;
+    top:50%;
+    left:45%;
+
+    display: flex;
+    justify-self: center;
+    align-items: center;
+
+}
+
+#spiner-box{
+    width: 100vw;
+    height: 100vh;
+}
+#spin img{
+    width: 10vw;
+    height: 10vw;
+}
+
+#spin {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid rgb(0, 0, 0);
+    border-bottom: 16px solid rgb(0, 0, 0);
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
