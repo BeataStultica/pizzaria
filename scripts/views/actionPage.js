@@ -5,11 +5,14 @@ function action_url(main){
             return main[0][i]
         }
     }
+    return false;
 }
 
 function view(main){
     let actia = action_url(main)
-
+    if (actia ==false){
+        return false
+    }
     let body =  `
     <div class = "container-fluid">
         <div class = "row">
