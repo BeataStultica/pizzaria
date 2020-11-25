@@ -22,6 +22,7 @@ function render(){
                 templateProcessor.render(view(data))}
                 else{
                     window.location.hash = '';
+                }
             }).then(()=>{spiner.close_spiner()});
 }
 render();
